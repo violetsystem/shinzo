@@ -1,0 +1,15 @@
+{
+    "tasks": [
+        {
+            "label": "Launch-qemu",
+            "command": "gnome-terminal",
+            "args": [
+                "--",
+                "sh",
+                "-c",
+                "bash -c \"cd ${workspaceFolder}/build/arch/x86_64 && make debug\""
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

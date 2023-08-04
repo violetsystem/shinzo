@@ -1,3 +1,3 @@
-void boot(){
+void boot(void){
     
 }
