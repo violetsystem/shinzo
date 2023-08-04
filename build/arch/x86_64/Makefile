@@ -7,7 +7,7 @@ CC = clang-15
 LD = ld.lld-15
 ASMC = nasm
 
-CFLAGS = -O3 -Werror -pedantic-errors -I$(_HOME)src --target=x86_64-unknown-none-elf -fno-rtti -ffreestanding -fno-builtin -nostdlib -fshort-wchar -g -mno-red-zone -fno-exceptions -fPIC
+CFLAGS = -O3 -Werror -pedantic-errors -mno-avx -mno-sse -I$(_HOME)src --target=x86_64-unknown-none-elf -fno-rtti -ffreestanding -fno-builtin -nostdlib -fshort-wchar -g -mno-red-zone -fno-exceptions -fPIC
 ASMFLAGS = 
 LDFLAGS = -T $(LDS) -static -Bsymbolic -nostdlib --no-relax
 
