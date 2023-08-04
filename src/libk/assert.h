@@ -1,5 +1,5 @@
-#ifndef MISC_ASSERT_H
-#define MISC_ASSERT_H
+#ifndef ASSERT_H
+#define ASSERT_H
 
 #include <types/types.h>
 

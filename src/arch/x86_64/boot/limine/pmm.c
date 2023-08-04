@@ -1,4 +1,5 @@
 #include <pmm/pmm.h>
+#include <vmm/vmm.h>
 #include <libk/math.h>
 #include <libk/assert.h>
 #include <arch/x86_64/boot/limine/limine.h>

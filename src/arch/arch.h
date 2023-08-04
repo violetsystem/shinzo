@@ -1,5 +1,5 @@
-#ifndef MISC_ARCH_H
-#define MISC_ARCH_H
+#ifndef ARCH_H
+#define ARCH_H
 
 #include <types/types.h>
 

@@ -1,6 +1,7 @@
-#ifndef MISC_PMM_H
-#define MISC_PMM_H
+#ifndef PMM_H
+#define PMM_H
 
+#include <vmm/vmm.h>
 #include <arch/arch.h>
 #include <lock/lock.h>
 #include <types/types.h>

@@ -1,5 +1,5 @@
-#ifndef MISC_ARCH_X86_64_H
-#define MISC_ARCH_X86_64_H
+#ifndef ARCH_X86_64_H
+#define ARCH_X86_64_H
 
 #include <arch/x86_64/vmm/vmm.h>
 

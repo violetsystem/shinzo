@@ -1,5 +1,5 @@
-#ifndef MISC_LOCK_H
-#define MISC_LOCK_H
+#ifndef LOCK_H
+#define LOCK_H
 
 #include <types/types.h>
 

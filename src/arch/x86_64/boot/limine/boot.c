@@ -66,8 +66,6 @@ void boot_limine(void){
 
     pmm_init(memmap_request.response);
 
-    void* test = pmm_allocate_page();
-
     while(1){
         __asm__("hlt");
     }
