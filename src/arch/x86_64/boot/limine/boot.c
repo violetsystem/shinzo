@@ -60,13 +60,22 @@ static volatile struct limine_boot_time_request boot_time_request = {
 
 /* Parsing requests */
 void pmm_init(struct limine_memmap_response* memory_info);
+void vmm_init(struct limine_memmap_response* memory_info);
 
 void boot_limine(void){
+    load_info.smp = ENOSYS;
+    load_info.vmm = ENOSYS;
+    load_info.pmm = ENOSYS;
+    load_info.simd = ENOSYS;
+    load_info.idt = ENOSYS;
+    load_info.gdt = ENOSYS;
+    load_info.apic = ENOSYS; 
+
     hhdm_address = (void*)hhdm_request.response->offset;
 
     pmm_init(memmap_request.response);
+    
+    vmm_init(memmap_request.response);
 
-    while(1){
-        __asm__("hlt");
-    }
+    boot();
 }

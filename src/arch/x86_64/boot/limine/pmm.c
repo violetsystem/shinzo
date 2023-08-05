@@ -2,6 +2,7 @@
 #include <vmm/vmm.h>
 #include <libk/math.h>
 #include <libk/assert.h>
+#include <arch/x86_64/boot/boot.h>
 #include <arch/x86_64/boot/limine/limine.h>
 
 static void* pmm_get_memory_end(struct limine_memmap_response* memory_info){
@@ -78,4 +79,6 @@ void pmm_init(struct limine_memmap_response* memory_info){
             }
         }
     }
+
+    load_info.pmm = 0;
 }

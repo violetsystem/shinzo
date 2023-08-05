@@ -19,6 +19,12 @@
         "assert.h": "c",
         "algorithm": "c",
         "__bit_reference": "c",
-        "memory.h": "c"
+        "memory.h": "c",
+        "types.h": "c",
+        "pmm.h": "c",
+        "stdint.h": "c",
+        "errno.h": "c",
+        "vmm.h": "c",
+        "boot.h": "c"
     }
 }
