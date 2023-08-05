@@ -10,7 +10,8 @@ typedef struct{
     int simd;
     int idt;
     int gdt;
-    int apic; 
+    int apic;
+    int arch_log;
 }load_info_t;
 
 #endif

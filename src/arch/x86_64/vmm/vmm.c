@@ -11,15 +11,6 @@ struct vmm_page_table{
     uint64_t entries[512];
 }__attribute__((packed));
 
-int vmm_initialize(void){
-    kernel_space = pmm_allocate_page();
-    memset((void*)kernel_space, 0, PAGE_SIZE);
-
-    assert(!vmm_space_swap(kernel_space));
-
-    return 0;
-}
-
 vmm_space_t vmm_create_space(void){
     return NULL;
 }

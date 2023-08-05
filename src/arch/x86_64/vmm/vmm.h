@@ -11,6 +11,4 @@ extern vmm_space_t kernel_space;
 #include <memory/memory.h>
 #include <arch/x86_64/asm.h>
 
-
-
 #endif

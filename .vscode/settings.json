@@ -25,6 +25,7 @@
         "stdint.h": "c",
         "errno.h": "c",
         "vmm.h": "c",
-        "boot.h": "c"
+        "boot.h": "c",
+        "log.h": "c"
     }
 }

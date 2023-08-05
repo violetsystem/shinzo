@@ -2,6 +2,7 @@
 #define ARCH_X86_64_BOOT_H
 
 #include <arch/x86_64/load.h>
+#include <arch/x86_64/log/log.h>
 
 #define BOOT_STACK_SIZE 0x10000
 

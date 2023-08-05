@@ -70,6 +70,8 @@ void boot_limine(void){
     load_info.idt = ENOSYS;
     load_info.gdt = ENOSYS;
     load_info.apic = ENOSYS; 
+    load_info.apic = ENOSYS; 
+    load_info.arch_log = ENOSYS; 
 
     hhdm_address = (void*)hhdm_request.response->offset;
 
