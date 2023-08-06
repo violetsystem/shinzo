@@ -46,7 +46,7 @@ static inline void asm_fninit(void){
     __asm__ volatile("fninit");  
 }
 
-static inline void asm_flush_tlb(void* address){
+static inline void asm_invlpg(void* address){
    __asm__ volatile("invlpg (%0)" ::"r" (address) : "memory");
 }
 

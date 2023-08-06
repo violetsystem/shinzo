@@ -26,6 +26,7 @@
         "errno.h": "c",
         "vmm.h": "c",
         "boot.h": "c",
-        "log.h": "c"
+        "log.h": "c",
+        "ios": "c"
     }
 }
