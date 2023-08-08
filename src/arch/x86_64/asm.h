@@ -25,11 +25,11 @@ static inline void asm_write_cr3(uint64_t value){
 }
 
 static inline vmm_space_t asm_get_paging_entry(void){
-    return (vmm_space_t)(asm_read_cr3() & ~(15)); // 15 = 0b1111
+    return (vmm_space_t)(asm_read_cr3() & ~(0xfff));
 } 
 
 static inline void asm_set_paging_entry(vmm_space_t space){
-    asm_write_cr3((((uint64_t)space) & ~(15)) | asm_read_cr3()); // 15 = 0b1111
+    asm_write_cr3((((uint64_t)space) & ~(0xfff)) | (asm_read_cr3() & 0xfff));
 } 
 
 static inline uint64_t asm_read_cr4(void){  

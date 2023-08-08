@@ -17,5 +17,6 @@ typedef uint8_t memory_flags_t;
 #define MEMORY_FLAG_DMA                 (1 << 4)
 
 void memset(void* start, uint8_t value, size_t size);
+void memcpy(void* dst, void* src, size_t size);
 
 #endif

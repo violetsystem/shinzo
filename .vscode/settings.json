@@ -27,6 +27,7 @@
         "vmm.h": "c",
         "boot.h": "c",
         "log.h": "c",
-        "ios": "c"
+        "ios": "c",
+        "arch.h": "c"
     }
 }
