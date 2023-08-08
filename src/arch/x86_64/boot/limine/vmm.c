@@ -4,7 +4,7 @@
 extern int vmm_clear_lower_half_entries(vmm_space_t space);
 extern int vmm_preload_higher_half_entries(vmm_space_t space);
 
-void vmm_init(struct limine_memmap_response* memory_info){
+void vmm_init(){
     /* limine map all we need, so all we have to do is preload the empty fields (the higher half part of the table: VMM_HALF_TABLE - VMM_END_TABLE) into the last pagination level. */
     kernel_space = vmm_get_current_space();
 
