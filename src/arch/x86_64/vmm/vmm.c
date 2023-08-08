@@ -209,6 +209,16 @@ void* vmm_get_physical_address(vmm_space_t space, void* virtual_address){
     return VMM_GET_PHYSICAL(*entry);
 }
 
+int vmm_clear_lower_half_entries(vmm_space_t space){
+    struct vmm_page_table* last_level_table = (struct vmm_page_table*)vmm_get_virtual_address(space);
+    
+    for(uint16_t i = VMM_START_TABLE; i < VMM_HALF_TABLE; i++){
+        last_level_table->entries[i] = 0;
+    }
+
+    return 0;
+}
+
 int vmm_preload_higher_half_entries(vmm_space_t space){
     struct vmm_page_table* last_level_table = (struct vmm_page_table*)vmm_get_virtual_address(space);
     
@@ -216,7 +226,11 @@ int vmm_preload_higher_half_entries(vmm_space_t space){
         vmm_entry* entry = &last_level_table->entries[i];
 
         if(!VMM_GET_FLAG(*entry, VMM_FLAG_PRESENT)){
-            *entry = vmm_make_entry(pmm_allocate_page(), VMM_FLAG_READ_WRITE | MEMORY_FLAG_USER);
+            void* physical_address = pmm_allocate_page();
+            void* virtual_address = vmm_get_virtual_address(physical_address);
+            memset(virtual_address, 0, PAGE_SIZE);
+            
+            *entry = vmm_make_entry(physical_address, VMM_FLAG_READ_WRITE | MEMORY_FLAG_USER);
         }
     }
 
